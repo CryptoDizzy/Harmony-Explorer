@@ -1,12 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
-import {
-  Switch,
-  Route
-} from "react-router-dom";
 import interestTheme from './theme';
-import Testone from './components/testone';
 import Enterbox from './components/enterbox';
 
 export default function App() {

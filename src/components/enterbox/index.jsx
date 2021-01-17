@@ -3,12 +3,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import TextField from "@material-ui/core/TextField";
-import Card from "@material-ui/core/Card";
-import CardActions from "@material-ui/core/CardActions";
-import CardContent from "@material-ui/core/CardContent";
 import Button from "@material-ui/core/Button";
-import Typography from "@material-ui/core/Typography";
-import ReactDOM from "react-dom";
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -23,6 +19,7 @@ const useStyles = makeStyles((theme) => ({
 
    textAlign: 'center'
   },
+
 }));
 
 export default function CenteredGrid() {
@@ -79,6 +76,8 @@ export default function CenteredGrid() {
         setBalance(fromWei(hexToNumber(response.result), Units.one));
       });
       console.log(oneaddressval);
+    }else{
+      
     }
   }
 
@@ -125,8 +124,10 @@ export default function CenteredGrid() {
               </Grid> */}
               <Grid item xs>
                 <Paper className={classes.title}>
-                  {print ? <h1>{balance}</h1> : <h1>0</h1>}
-                  {print ? <h1>{oneaddress}</h1> : <h1>0</h1>}
+                
+                  {print && validAdd? <h1>{balance} ONEs.</h1>:<h2>Enter one address</h2>}
+                  {validAdd && print? <h2>in wallet address</h2> :null}
+                  {validAdd && print? <h1>{oneaddress}</h1> :null}
                 </Paper>
               </Grid>
               {/* <Grid item xs>
