@@ -19,6 +19,10 @@ const useStyles = makeStyles((theme) => ({
     //   textAlign: 'center',
     color: theme.palette.text.secondary,
   },
+  title: {
+
+   textAlign: 'center'
+  },
 }));
 
 export default function CenteredGrid() {
@@ -85,7 +89,7 @@ export default function CenteredGrid() {
       <Grid container spacing={3}>
         <Grid item xs={12}>
           <Paper className={classes.paper}>
-          <h1>Harmony Explorar</h1>
+         <div><h1 className={classes.title} >Harmony Explorar</h1></div> 
             <Paper className={classes.paper}>
               {/* <input type="text" onChange={getData} /> */}
               <TextField
@@ -115,18 +119,19 @@ export default function CenteredGrid() {
         <Grid item xs={12}>
           <Paper className={classes.paper}>
             <Grid container spacing={3}>
-              <Grid item xs>
-                <Paper className={classes.paper}></Paper>
-              </Grid>
-              <Grid item xs={6}>
+              
+              {/* <Grid item xs={6}>
                 <Paper className={classes.paper}>Balance</Paper>
-              </Grid>
+              </Grid> */}
               <Grid item xs>
-                <Paper className={classes.paper}>
+                <Paper className={classes.title}>
                   {print ? <h1>{balance}</h1> : <h1>0</h1>}
                   {print ? <h1>{oneaddress}</h1> : <h1>0</h1>}
                 </Paper>
               </Grid>
+              {/* <Grid item xs>
+                <Paper className={classes.paper}></Paper>
+              </Grid> */}
             </Grid>
           </Paper>
         </Grid>
