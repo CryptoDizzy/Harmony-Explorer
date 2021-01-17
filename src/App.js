@@ -7,13 +7,15 @@ import {
 } from "react-router-dom";
 import interestTheme from './theme';
 import Testone from './components/testone';
+import Enterbox from './components/enterbox';
 
 export default function App() {
   
   return (
     
     <MuiThemeProvider theme={ createMuiTheme(interestTheme) }>
-      <Testone/>
+      
+      <Enterbox/>
       <CssBaseline />
 
     </MuiThemeProvider>
